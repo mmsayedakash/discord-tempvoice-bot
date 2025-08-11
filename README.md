@@ -68,6 +68,8 @@ npm install
 node index.js
 ```
 
+---
+
 ## 🔎 Usage
 
 * Have users join one of the configured **waiting voice channels**.
@@ -96,8 +98,6 @@ Contributions, suggestions, and bug reports are welcome! Please:
 * Write clear commit messages.
 * Open pull requests with detailed descriptions.
 * Report issues in GitHub Issues.
-
----
 
 ## 📜 License
 
