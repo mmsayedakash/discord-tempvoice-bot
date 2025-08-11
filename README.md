@@ -52,24 +52,24 @@ This bot supports multiple configurable categories, role-based permissions, cool
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/KaloudasDev/discord-temp-voice.git
-   cd discord-temp-voice
+```bash
+git clone https://github.com/KaloudasDev/discord-temp-voice.git
+cd discord-temp-voice
 ```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Create a `.env` file in the root directory based on the provided `.env.example` and fill in your bot token, guild ID, channel IDs, role IDs, cooldowns, and colors.
 
 4. Start the bot:
 
-   ```bash
-   node index.js
-   ```
+```bash
+node index.js
+```
 
 > [!TIP]  
 > Configure your `.env` file carefully with valid Discord IDs and tokens. Restart the bot after any changes for them to take effect.
