@@ -109,6 +109,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 👤 Author
 
-Created by [YourName](https://github.com/KaloudasDev).
+Created by [KaloudasDev](https://github.com/KaloudasDev).
 
 If you find this project useful, please ⭐ star the repository!
