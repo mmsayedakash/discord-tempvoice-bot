@@ -1,0 +1,162 @@
+Got it! I’ll create a professional, comprehensive README.md for your Discord voice channel manager bot project using the style and sections from your provided template, but adapted to your project’s specifics and complexity.
+
+---
+
+# 🎙️ Discord Temporary Voice Channel Manager
+
+**Discord Temporary Voice Channel Manager** is a robust Node.js Discord bot designed to dynamically create, manage, and clean up temporary voice channels in your server. It’s perfect for communities that want to automate private or semi-private voice rooms for support, games, donations, or other use cases, while maintaining server order and preventing channel clutter.
+
+This project handles multiple categories of temporary voice channels with role-based permissions, cooldowns, notifications, and automatic cleanups for empty channels.
+
+---
+
+## ✨ Features
+
+* [x] Dynamic creation of temporary voice channels based on user joining special "waiting" voice channels.
+* [x] Automatic deletion of empty temporary voice channels with configurable delays.
+* [x] Multiple independent categories support (e.g., Support, Mafia, Donate) with individual configs.
+* [x] Per-user cooldowns to prevent spamming channel creation.
+* [x] Role-based permission overwrites on temporary voice channels.
+* [x] Notification embeds sent to configured text channels when users join temporary voice channels.
+* [x] Robust periodic cleaning to ensure no orphaned empty channels remain.
+* [x] Environment variable configuration via `.env` for easy customization.
+* [x] Graceful handling of Discord API errors and missing permissions.
+* [x] Modular code structure for maintainability and extensibility.
+* [ ] Future planned features: web dashboard for configuration, customizable channel limits, multilingual support.
+
+---
+
+## ⚙️ How it works
+
+1. **Waiting Channels**
+   Users join specific "waiting" voice channels configured per category (e.g., Support waiting channel). When a user joins, the bot creates a new temporary voice channel under a configured category with the user and staff roles having access.
+
+2. **Cooldowns**
+   Each user has a cooldown per category to prevent abuse. If a user tries to create a channel before cooldown expires, the bot disconnects them from the waiting channel silently.
+
+3. **Active Channel Tracking**
+   The bot keeps track of which user owns which temporary voice channel to allow them to rejoin existing empty channels or delete channels when empty.
+
+4. **Automatic Cleanup**
+   When a temporary channel becomes empty, the bot waits briefly, then deletes it to keep the server tidy.
+
+5. **Notifications**
+   The bot sends rich embedded messages to configured text channels notifying staff when someone creates or joins a temporary voice channel.
+
+6. **Periodic Sweeps**
+   Every 5 seconds, the bot runs a cleanup routine to delete any leftover empty temporary channels that might have escaped the usual deletion triggers.
+
+---
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+
+* Node.js v18 or newer (recommended)
+* A Discord bot application with proper permissions:
+
+  * `View Channels`
+  * `Connect`
+  * `Speak`
+  * `Manage Channels`
+  * `Move Members`
+  * `Mute Members`
+* A Discord server where you have Admin rights to configure channels and roles.
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/discord-temp-voice-manager.git
+cd discord-temp-voice-manager
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root directory based on the `.env.example` template and fill in your bot token, guild ID, channel IDs, role IDs, cooldowns, and other configurations.
+
+4. Run the bot:
+
+```bash
+node index.js
+```
+
+### Environment Variables
+
+Your `.env` should define:
+
+```env
+CLIENT_TOKEN=your-bot-token
+GUILD_ID=your-guild-id
+
+# Category 1 (Support) Example:
+CHANNEL1_CHANNEL_NAME=SupportRoom
+CHANNEL1_JOIN_CATEGORY_ID=category-id-for-support
+CHANNEL1_JOIN_CHANNEL_ID=voice-channel-id-where-users-join-to-create
+CHANNEL1_NOTIFY_CHANNEL_ID=text-channel-id-for-notifications
+CHANNEL1_NOTIFY_EMBED_COLOR=3498DB
+CHANNEL1_STAFF_IDS=role-id-1,role-id-2
+CHANNEL1_COOLDOWN=30
+
+# Repeat for CHANNEL2_ and CHANNEL3_ categories
+```
+
+---
+
+## 🔎 Usage
+
+* Join one of the configured waiting voice channels.
+* The bot will create a private temporary voice channel for you in the designated category.
+* Staff roles defined in the config will have access to moderate/move users in these channels.
+* When you leave and the channel is empty, it will be automatically deleted.
+* Notifications will be sent to configured text channels upon new temporary channel creation.
+
+---
+
+## ⚠️ Permissions
+
+Make sure your bot has the following permissions in the guild and target categories:
+
+* `Manage Channels`
+* `Connect`
+* `View Channel`
+* `Move Members`
+* `Mute Members`
+* `Speak`
+* `Use Voice Activity`
+
+Also, ensure the bot’s role is high enough in the role hierarchy to manage permissions for temporary channels.
+
+---
+
+## 📣 Contributing
+
+Contributions are welcome! Please:
+
+* Fork the repo and create your feature branch.
+* Write clear commit messages.
+* Submit pull requests with detailed explanations.
+* Report bugs or feature requests via GitHub Issues.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+Created by [YourName](https://github.com/yourusername).
+
+If you find this project helpful, please ⭐ star the repo to support development!
+
+---
+
+Would you like me to generate this README as a markdown file you can directly use?
