@@ -37,9 +37,6 @@ This bot supports multiple configurable categories, role-based permissions, cool
 6. **Periodic Cleanup:**  
    Every 5 seconds, a cleanup job removes any empty temporary channels that might have been missed, maintaining server hygiene.
 
-> [!WARNING]  
-> This bot requires the **Manage Channels** and **Connect** permissions, along with access to the relevant voice and text channels it manages. Ensure the bot’s role is above any roles it needs to manage in the hierarchy.
-
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
@@ -70,9 +67,6 @@ npm install
 ```bash
 node index.js
 ```
-
-> [!TIP]  
-> Configure your `.env` file carefully with valid Discord IDs and tokens. Restart the bot after any changes for them to take effect.
 
 ## 🔎 Usage
 
