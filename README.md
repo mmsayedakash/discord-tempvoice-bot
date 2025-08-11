@@ -97,12 +97,13 @@ Contributions, suggestions, and bug reports are welcome! Please:
 * Open pull requests with detailed descriptions.
 * Report issues in GitHub Issues.
 
+---
+
 ## 📜 License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — a permissive open-source license that allows you to freely use, modify, and distribute the software with minimal restrictions. For full details, please refer to the [LICENSE](./LICENSE) file.
 
 ## 👤 Author
 
-Created by [KaloudasDev](https://github.com/KaloudasDev).
-
-If you find this project useful, please ⭐ star the repository!
+Created and maintained by **KaloudasDev**.
+If you find this project useful, your ⭐️ star on the repository would be greatly appreciated and helps support ongoing development!
