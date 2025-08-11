@@ -1,4 +1,4 @@
-## 🎙️ Discord Temporary Voice Channel Manager
+## 🎙️ Temporary Voice Channel Manager
 
 **Discord Temporary Voice Channel Manager** is a powerful Node.js Discord bot designed to automate the creation, management, and cleanup of temporary voice channels. Ideal for communities looking to streamline private voice rooms for support, gaming, donations, and more, while keeping their server organized and free of clutter.
 
