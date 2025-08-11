@@ -101,10 +101,10 @@ Contributions, suggestions, and bug reports are welcome! Please:
 
 ## 📋 License
 
-This project is licensed under the **MIT License** — a permissive open-source license that allows you to freely use, modify, and distribute the software with minimal restrictions. For full details, please refer to the [LICENSE](./LICENSE) file.
+This project is licensed under the **MIT License**. A permissive open-source license that allows you to freely use, modify, and distribute the software with minimal restrictions.  
+For full details, please refer to the [LICENSE](./LICENSE) file.
 
 ## ✒️ Author
 
-Created and maintained by **KaloudasDev**.
-
+Created and maintained by **KaloudasDev**.  
 If you find this project useful, your ⭐️ star on the repository would be greatly appreciated and helps support ongoing development!
