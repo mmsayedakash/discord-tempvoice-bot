@@ -4,8 +4,6 @@
 
 This bot supports multiple configurable categories, role-based permissions, cooldowns, notifications, and periodic cleanup for a smooth user and staff experience.
 
----
-
 ## ✨ Features
 
 * [x] Dynamically create temporary voice channels when users join configured "waiting" voice channels.
@@ -18,8 +16,6 @@ This bot supports multiple configurable categories, role-based permissions, cool
 * [x] Fully configurable through environment variables for flexibility.
 * [x] Modular, maintainable codebase with error handling for Discord API interactions.
 * [ ] Planned: Web dashboard for easier configuration, channel limits, multi-language support.
-
----
 
 ## ⚙️ How It Works
 
@@ -41,15 +37,11 @@ This bot supports multiple configurable categories, role-based permissions, cool
 6. **Periodic Cleanup:**  
    Every 5 seconds, a cleanup job removes any empty temporary channels that might have been missed, maintaining server hygiene.
 
----
-
 > [!WARNING]  
 > This bot requires the **Manage Channels** and **Connect** permissions, along with access to the relevant voice and text channels it manages. Ensure the bot’s role is above any roles it needs to manage in the hierarchy.
 
 > [!TIP]  
 > Configure your `.env` file carefully with valid Discord IDs and tokens. Restart the bot after any changes for them to take effect.
-
----
 
 ## 🛠️ Installation & Setup
 
@@ -82,8 +74,6 @@ This bot supports multiple configurable categories, role-based permissions, cool
    node index.js
    ```
 
----
-
 ## 🔎 Usage
 
 * Have users join one of the configured **waiting voice channels**.
@@ -91,8 +81,6 @@ This bot supports multiple configurable categories, role-based permissions, cool
 * Staff roles configured will have permissions to moderate the channel.
 * Temporary channels delete themselves once empty after a short timeout.
 * Notifications are sent to specified text channels when users join temporary channels.
-
----
 
 ## ⚠️ Permissions & Role Setup
 
@@ -106,8 +94,6 @@ Ensure the bot has these permissions:
 
 * The bot’s role must be higher in the role hierarchy than roles it manages for permission overwrites to succeed.
 
----
-
 ## 📣 Contributing
 
 Contributions, suggestions, and bug reports are welcome! Please:
@@ -117,13 +103,9 @@ Contributions, suggestions, and bug reports are welcome! Please:
 * Open pull requests with detailed descriptions.
 * Report issues in GitHub Issues.
 
----
-
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👤 Author
 
